@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, Fragment, useState} from 'react';
+import {Map, Marker, TileLayer, Popup} from "react-leaflet";
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import projectCenters from "./Components/IQPLocations";
+delete L.Icon.Default.prototype._getIconUrl;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+});
+
+
+export default class App extends Component{
+    handleClick = (link) => (e) => {
+        if (link === ""){
+        }
+        else {
+            window.open(link, "_blank");
+        }
+    }
+  render() {
+    return (
+        <Fragment>
+          <Map style={{ height: "100vh", width: "100%" }} className="mapStyle" center={[0, 0]} zoom={3}>
+            <TileLayer
+                attribution='Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+                url={'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}'}
+            />
+              {projectCenters.map((center, k) => {
+                  let position = [center["coordinates"][0], center["coordinates"][1]]
+                  return (
+                      <Marker
+                          key={k}
+                          onMouseOver={(e) => {
+                              e.target.openPopup();
+                          }}
+                          onMouseOut={(e) => {
+                              e.target.closePopup();
+                          }}
+                          onClick={this.handleClick(center.link)}
+                          position={position}
+                      >
+                          <Popup> {center.name} </Popup>
+                      </Marker>
+                  )
+              })
+              }
+          </Map>
+        </Fragment>
+    )
+  }
+
 }
-
-export default App;
