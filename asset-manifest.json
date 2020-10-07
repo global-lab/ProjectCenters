@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ProjectCenters/static/css/main.290d17ff.chunk.css",
+    "main.js": "/ProjectCenters/static/js/main.2918fd4a.chunk.js",
+    "main.js.map": "/ProjectCenters/static/js/main.2918fd4a.chunk.js.map",
+    "runtime-main.js": "/ProjectCenters/static/js/runtime-main.a2af1fa3.js",
+    "runtime-main.js.map": "/ProjectCenters/static/js/runtime-main.a2af1fa3.js.map",
+    "static/css/2.a4567992.chunk.css": "/ProjectCenters/static/css/2.a4567992.chunk.css",
+    "static/js/2.30b7caa9.chunk.js": "/ProjectCenters/static/js/2.30b7caa9.chunk.js",
+    "static/js/2.30b7caa9.chunk.js.map": "/ProjectCenters/static/js/2.30b7caa9.chunk.js.map",
+    "index.html": "/ProjectCenters/index.html",
+    "precache-manifest.e9b585783bc4e88221ba3ce3c8a37497.js": "/ProjectCenters/precache-manifest.e9b585783bc4e88221ba3ce3c8a37497.js",
+    "service-worker.js": "/ProjectCenters/service-worker.js",
+    "static/css/2.a4567992.chunk.css.map": "/ProjectCenters/static/css/2.a4567992.chunk.css.map",
+    "static/css/main.290d17ff.chunk.css.map": "/ProjectCenters/static/css/main.290d17ff.chunk.css.map",
+    "static/js/2.30b7caa9.chunk.js.LICENSE.txt": "/ProjectCenters/static/js/2.30b7caa9.chunk.js.LICENSE.txt",
+    "static/media/WPI_Inst.png": "/ProjectCenters/static/media/WPI_Inst.25bd2429.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2af1fa3.js",
+    "static/css/2.a4567992.chunk.css",
+    "static/js/2.30b7caa9.chunk.js",
+    "static/css/main.290d17ff.chunk.css",
+    "static/js/main.2918fd4a.chunk.js"
+  ]
+}
