@@ -34,7 +34,7 @@ var projectCenters = [
     { "name": "Panama City, Panama Project Center - IQP", "coordinates": [8.9824, -79.5199], "link": "https://wp.wpi.edu/panamacity/?_ga=2.96566559.1819662396.1600115702-1932763245.1598839577"},
     { "name": "Prague, Czech Republic Project Center - IQP", "coordinates": [50.0755, 14.4378], "link": ""},
     { "name": "Rabat, Morocco Project Center - IQP", "coordinates": [33.9716, -6.8498], "link": "https://wp.wpi.edu/morocco/?_ga=2.163617855.1819662396.1600115702-1932763245.1598839577"},
-    { "name": "Reykjavik, Iceland Project Center - IQP", "coordinates": [64.1466, -21.9426], "link": ""},
+    { "name": "Reykjavik, Iceland Project Center - IQP", "coordinates": [64.1466, -21.9426], "link": "https://wp.wpi.edu/iceland/"},
     { "name": "San Jose, Costa Rica Project Center - IQP", "coordinates": [9.9281, -84.0907], "link": "https://wp.wpi.edu/costarica/?_ga=2.165255231.1819662396.1600115702-1932763245.1598839577"},
     { "name": "San Juan, Puerto Rico Project Center - IQP", "coordinates": [18.4655, -66.1057], "link": "https://wp.wpi.edu/puertorico/?_ga=2.67213713.1819662396.1600115702-1932763245.1598839577"},
     { "name": "Santa Fe, New Mexico Project Center - IQP", "coordinates": [35.6870, -105.9378], "link": "http://santafeprojectcenter.org/"},

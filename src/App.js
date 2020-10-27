@@ -4,7 +4,9 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './App.css';
 import WPI from './images/WPI_Inst.png'
+import WPISmall from './images/WPI_Small.png'
 import text from './images/text.png';
+import {FaMapMarkedAlt, FaExternalLinkAlt} from "react-icons/fa";
 
 import projectCenters from "./Components/IQPLocations";
 delete L.Icon.Default.prototype._getIconUrl;
@@ -24,6 +26,11 @@ export default class App extends Component{
             window.open(link, "_blank");
         }
     }
+
+    handleExternalClick = () => {
+        window.open('https://global-lab.github.io/ProjectCenters/', '_blank')
+    }
+
   render() {
     return (
         <Fragment>
@@ -33,6 +40,13 @@ export default class App extends Component{
             <div className="WinLogo">
                 <img src={WPI} alt="WIN"/>
             </div>
+            <div className="WPISmall">
+                <img src={WPISmall} alt="WIN"/>
+            </div>
+            <div id="Externallink" onClick={this.handleExternalClick}>
+                <FaExternalLinkAlt size={24}/>
+            </div>
+
           <Map style={{ height: "100vh", width: "100%" }} className="mapStyle" center={[0, 0]} zoom={3}>
             <TileLayer
                 attribution='Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
